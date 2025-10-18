@@ -8,7 +8,7 @@ from dateutil import parser
 from flask import Flask, request, jsonify, send_file, session, render_template_string
 from werkzeug.utils import secure_filename
 from pymongo import MongoClient
-from bson import ObjectId
+from bson.objectid import ObjectId
 import bcrypt
 
 from reportlab.lib.pagesizes import LETTER
@@ -2040,4 +2040,4 @@ def generate_pdf_report(doc: dict) -> bytes:
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
-    app.run(host="0.0.0.0",port=port,debug=True)
+    
